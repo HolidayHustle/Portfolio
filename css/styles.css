@@ -1,0 +1,279 @@
+:root {
+  --black: #17153b;
+  --pinkish: #c8acd6;
+  --lightblue: #9bf2ea;
+  --darkgreen: #41bfb3;
+  --darkpurple: #2e236c;
+  --mdpurple: #433d8b;
+  --whitish: #f7f8fa;
+  --nightblue: #1b1a55;
+  --projectcolor: #180161;
+  --mono: "Oxygen mono", monospace;
+  --sans: Oxygen, sans-serif;
+  --font-size: 18px;
+  --line-height: 1.5;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/* This can be useful for maintaining a consistent layout and avoiding unexpected sizing issues. */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--sans);
+  background-color: var(--black);
+  color: var(--whitish);
+  font-size: var(--font-size);
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--pinkish);
+}
+
+a:hover {
+  color: var(--darkgreen);
+  text-decoration: none;
+}
+#intro {
+  padding: 4rem 1rem 10rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#intro p {
+  font-size: 1rem;
+  line-height: var(--line-height);
+}
+#intro .name {
+  font-family: var(--mono);
+}
+.name span {
+  font-family: var(--sans);
+  font-size: 4rem;
+  color: var(--lightblue);
+  font-weight: 300;
+  display: block;
+}
+#intro h2 {
+  font-size: 4rem;
+}
+#contact {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 3rem 0;
+  background-color: var(--);
+}
+
+#contact p:last-child {
+  margin-top: 3rem;
+}
+.section-colored {
+  background-color: var(--nightblue);
+}
+.section-project {
+  background-color: var(--darkpurple);
+}
+.gradient {
+  background: rgb(63, 94, 251);
+  background: rgb(63, 94, 251);
+  background: linear-gradient(
+    90deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  height: 3px;
+}
+header {
+  padding: 2rem 0;
+}
+
+nav {
+  font-family: var(--mono);
+  font-size: 80%;
+}
+nav h1 a {
+  font-family: var(--sans);
+}
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+nav li:first-child {
+  text-align: center;
+  flex-basis: 100%;
+}
+nav [class*="fa-"] {
+  font-size: 150%;
+  color: var(--lightblue);
+}
+nav a:hover,
+nav [class*="fa-"]:hover {
+  color: var(--darkgreen);
+}
+nav ul li a {
+  color: var(--whitish);
+  text-decoration: none;
+  display: block;
+  padding: 0 1rem;
+}
+.button {
+  background-color: var(--pinkish);
+  padding: 5px 20px;
+  border-radius: 4px;
+  font-family: var(--mono);
+  text-decoration: none;
+  color: var(--black);
+}
+.button a {
+  color: var(--black);
+}
+.button a:hover,
+.button:hover {
+  color: var(--whitish);
+  background-color: #777;
+}
+footer {
+  padding: 4rem 0;
+  background-color: var(--mdpurple);
+  text-align: center;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  list-style-type: none;
+  margin: 2rem auto;
+}
+footer [class*="fa-"] {
+  font-size: 200%;
+  color: var(--lightblue);
+}
+footer p {
+  margin-top: 3rem;
+  font-size: 80%;
+}
+
+footer [class*="fa-"]:hover {
+  color: var(--darkgreen);
+}
+#about-me,
+#projects {
+  padding: 4rem 1rem 10rem 1rem;
+}
+#about-me h2,
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+#about-me img,
+#projects img {
+  margin: 2rem 0 4rem 0;
+  border-left: 1px solid var(--lightblue);
+  border-top: 1px solid var(--lightblue);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+}
+#about-me h3,
+#projects h3 {
+  color: var(--lightblue);
+}
+#about-me h4,
+#projects h4 {
+  font-size: 1rem;
+  font-family: var(--mono);
+  font-weight: 300;
+  margin: 0;
+}
+.black-box {
+  background-color: var(--black);
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  line-height: var(--line-height);
+  margin: 2rem 0;
+}
+#about-me ul,
+#projects ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style-type: none;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 550px) {
+  #about-me article,
+  #projects article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+  }
+  .text {
+    order: 1;
+    text-align: right;
+    grid-column: 5 / 11;
+    grid-row: 1 / 2;
+  }
+  #about-me img,
+  img {
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+  }
+  #about-me ul,
+  #projects ul {
+    justify-content: flex-end;
+  }
+  .img2 {
+    order: -1;
+    text-align: right;
+    grid-column: 5 / 11;
+    grid-row: 1 / 2;
+    width: 100%;
+  }
+  .text2 {
+    text-align: left;
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+  }
+  #projects .ul2 {
+    justify-content: flex-start;
+  }
+}
+.about {
+  background-color: var(--mdpurple);
+}
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
